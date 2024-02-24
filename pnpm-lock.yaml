@@ -573,6 +573,9 @@ importers:
       '@scalar/use-modal':
         specifier: workspace:*
         version: link:../use-modal
+      '@vue/shared':
+        specifier: ^3.4.19
+        version: 3.4.19
       '@vueuse/core':
         specifier: ^10.4.1
         version: 10.4.1(vue@3.3.4)

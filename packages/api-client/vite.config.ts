@@ -6,7 +6,16 @@ import { defineConfig } from 'vitest/config'
 import pkg from './package.json'
 
 export default defineConfig({
-  plugins: [vue(), cssInjectedByJsPlugin()],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag === 'api-client',
+        },
+      },
+    }),
+    cssInjectedByJsPlugin(),
+  ],
   build: {
     cssCodeSplit: false,
     minify: false,
